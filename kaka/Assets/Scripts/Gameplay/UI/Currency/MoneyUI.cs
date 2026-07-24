@@ -1,16 +1,28 @@
+// MoneyUI.cs attached to the Money text object
 using UnityEngine;
+using TMPro;
 
-public class Moneyui : MonoBehaviour
+public class MoneyUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private TextMeshProUGUI MoneyText;
+
+    private void OnEnable()
     {
-        
+        CurrencyManager.OnMoneyChanged += UpdateUI;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        CurrencyManager.OnMoneyChanged -= UpdateUI;
+    }
+
+    private void Start()
+    {
+        if (CurrencyManager.Instance != null) UpdateUI(CurrencyManager.Instance.Money);
+    }
+
+    private void UpdateUI(double amount)
+    {
+        MoneyText.text = $"Money: {amount:N0}";
     }
 }

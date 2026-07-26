@@ -20,7 +20,7 @@ public class UpgradeData : ScriptableObject
 // Defines all available upgrade types in your game
 public enum UpgradeType 
 { 
-    Counter, 
+    Clicker, 
     AlarmClock,
 
     IncomeMultiplier 

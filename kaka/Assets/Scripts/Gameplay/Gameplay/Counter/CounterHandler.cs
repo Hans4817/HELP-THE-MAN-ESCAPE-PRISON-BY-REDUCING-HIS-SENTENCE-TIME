@@ -40,7 +40,6 @@ public class CounterHandler : MonoBehaviour
 
     private void OnObjectClicked()
     {
-        Debug.Log("you did it!");
         CurrencyManager.Instance.AddMoney(amountPerClick);
     }
 }

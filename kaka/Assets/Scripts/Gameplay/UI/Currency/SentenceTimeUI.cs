@@ -9,13 +9,11 @@ public class SentenceTimeUI : MonoBehaviour
     private void OnEnable()
     {
         CurrencyManager.OnSentenceTimeChanged += UpdateUI;
-        Debug.LogWarning("Enabled");
     }
 
     private void OnDisable()
     {
         CurrencyManager.OnSentenceTimeChanged -= UpdateUI;
-        Debug.LogWarning("Disabled");
     }
 
     private void Start()
@@ -25,6 +23,6 @@ public class SentenceTimeUI : MonoBehaviour
 
     private void UpdateUI(double amount)
     {
-        SentenceTimeText.text = $"Time: {amount:N0}s";
+        SentenceTimeText.text = $"{NumberFormatter.Format(amount)}";
     }
 }

@@ -11,9 +11,7 @@ public class SpawnArea : MonoBehaviour
         if (spawnZone != null) spawnZone.isTrigger = true;
     }
 
-    /// <summary>
     /// Calculates a random position inside the BoxCollider boundaries.
-    /// </summary>
     public Vector3 GetRandomSpawnPosition()
     {
         if (spawnZone == null)

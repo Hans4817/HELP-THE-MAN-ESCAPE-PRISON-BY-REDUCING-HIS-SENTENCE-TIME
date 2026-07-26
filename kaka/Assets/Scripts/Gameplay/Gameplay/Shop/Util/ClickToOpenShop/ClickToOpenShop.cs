@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ClickToOpenShop : MonoBehaviour
 {
-    [SerializeField] private float maxReachDistance = 5f;
+    //[SerializeField] private float maxReachDistance = 5f;
 
     [SerializeField] private CanvasGroup ShopCanva;
 
@@ -21,24 +21,24 @@ public class ClickToOpenShop : MonoBehaviour
 
     private void Update()
     {
-        // Detect left mouse click while the cursor is locked
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            if (playerCamera == null) return;
-
-            // Shoots a ray out from the exact center of the screen (0.5, 0.5)
-            Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-
-            if (Physics.Raycast(ray, out RaycastHit hit, maxReachDistance))
-            {
-                // Check if the object we aimed at and clicked is THIS object
-                if (hit.transform == transform)
-                {
-                    OnObjectClicked();
-                }
-            }
-        }
-        else if(Keyboard.current[Key.E].isPressed)
+//        // Detect left mouse click while the cursor is locked
+//        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+//        {
+//            if (playerCamera == null) return;
+//
+//            // Shoots a ray out from the exact center of the screen (0.5, 0.5)
+//            Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+//
+//            if (Physics.Raycast(ray, out RaycastHit hit, maxReachDistance))
+//            {
+//                // Check if the object we aimed at and clicked is THIS object
+//                if (hit.transform == transform)
+//                {
+//                    OnObjectClicked();
+//                }
+//            }
+//        }
+        if(Keyboard.current[Key.E].isPressed)
         {
             OnObjectClicked();
         }

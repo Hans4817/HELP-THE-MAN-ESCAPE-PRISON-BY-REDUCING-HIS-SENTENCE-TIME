@@ -14,7 +14,7 @@ public class CurrencyManager : MonoBehaviour
 
     // Currencies with default starting values
     public double Money { get; private set; } = 10;
-    public double SentenceTime { get; private set; } = 999;
+    public double SentenceTime { get; private set; } = 1e18d;
 
     // Multipliers (Default is 1.0x -> normal earnings)
     public double MoneyMultiplier { get; private set; } = 1.0;
@@ -40,6 +40,8 @@ public class CurrencyManager : MonoBehaviour
 
         Money += finalAmount;
         OnMoneyChanged?.Invoke(Money);
+
+        SubtractSentenceTime(finalAmount);
     }
 
     public void SubtractMoney(double baseAmount)
@@ -83,6 +85,21 @@ public class CurrencyManager : MonoBehaviour
         if (SentenceTime < 0) Debug.LogWarning("WINNING");
         OnSentenceTimeChanged?.Invoke(SentenceTime);
     }
+
+    // Example: Slash sentence time by 15% (multiplies current time by 0.85)
+    public void MultiplySentenceTime(double factor)
+    {
+        SentenceTime *= factor; // e.g., factor = 0.85 for a 15% drop
+        
+        if (SentenceTime <= 0)
+        {
+            SentenceTime = 0;
+            Debug.LogWarning("WINNING");
+        }
+
+        OnSentenceTimeChanged?.Invoke(SentenceTime);
+    }
+
     public void AddSentenceTimeMultiplier(double amount)
     {
         if (amount <= 0) return;

@@ -23,6 +23,7 @@ public class MoneyUI : MonoBehaviour
 
     private void UpdateUI(double amount)
     {
+        Debug.Log(amount);
         MoneyText.text = $"{NumberFormatter.Format(amount)}";
     }
 }

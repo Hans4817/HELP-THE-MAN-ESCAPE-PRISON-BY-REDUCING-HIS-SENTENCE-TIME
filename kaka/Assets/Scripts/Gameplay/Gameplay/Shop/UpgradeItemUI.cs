@@ -16,12 +16,15 @@ public class UpgradeItemUI : MonoBehaviour
     private double currentPrice;
     private int currentLevel = 0;
     
-    // Exponential Growth Factor (1.15 = 15% increase per level, 1.5 = 50% increase)
+    // Exponential Growth Factor (1.15 = 15% increase per level)
     [SerializeField] private double priceGrowthFactor = 1.15;
 
     public void Setup(UpgradeData data, SpawnArea spawnArea)
     {
         if (data == null) return;
+
+        // Ensure price growth factor is never <= 1 to avoid broken calculations
+        if (priceGrowthFactor <= 1.0) priceGrowthFactor = 1.15;
 
         basePrice = data.price;
         CalculateCurrentPrice();
@@ -30,11 +33,20 @@ public class UpgradeItemUI : MonoBehaviour
         UpdatePriceUI();
         if (iconImage != null && data.icon != null) iconImage.sprite = data.icon;
 
+        if (buyButton == null)
+        {
+            Debug.LogError($"Buy button reference is missing on {gameObject.name}!", this);
+            return;
+        }
+
         buyButton.onClick.RemoveAllListeners();
         buyButton.onClick.AddListener(() =>
         {
             if (CurrencyManager.Instance != null && CurrencyManager.Instance.CanAffordMoney(currentPrice))
             {
+                // Optional: Deduct currency if CanAffordMoney doesn't automatically do so
+                // CurrencyManager.Instance.SubtractMoney(currentPrice);
+
                 Debug.Log($"Purchased: {data.upgradeName} Level {currentLevel + 1} for ${currentPrice:N0}!");
 
                 // 1. Apply effect based on UpgradeType from UpgradeData

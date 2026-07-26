@@ -16,5 +16,5 @@ MonoBehaviour:
   price: 100
   icon: {fileID: 21300000, guid: 5357cbace885c6440aefc506840891c9, type: 3}
   upgradeType: 2
-  upgradeValue: 0
+  upgradeValue: 1.5
   prefabToSpawn: {fileID: 976364341222987734, guid: 12fcb67a147519d44adc543904241b5c, type: 3}

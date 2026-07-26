@@ -12,11 +12,16 @@ public class UpgradeData : ScriptableObject
     [Header("Upgrade Settings")]
     public UpgradeType upgradeType; // Which stat to boost (Speed, JumpPower, etc.)
     public float upgradeValue;      // The numerical boost amount (e.g., +2.5 speed)
+
+    [Header("World Spawn Settings")]
+    public GameObject prefabToSpawn; // The physical 3D object to spawn in the scene
 }
 
 // Defines all available upgrade types in your game
 public enum UpgradeType 
 { 
     Counter, 
+    AlarmClock,
+
     IncomeMultiplier 
 }

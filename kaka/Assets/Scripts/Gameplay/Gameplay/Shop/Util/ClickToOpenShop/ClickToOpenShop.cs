@@ -38,6 +38,10 @@ public class ClickToOpenShop : MonoBehaviour
                 }
             }
         }
+        else if(Keyboard.current[Key.E].isPressed)
+        {
+            OnObjectClicked();
+        }
     }
 
     private void OnObjectClicked()

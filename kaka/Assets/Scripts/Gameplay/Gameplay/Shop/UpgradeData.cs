@@ -25,5 +25,6 @@ public enum UpgradeType
     LeftoverPizza,
     Mug,
     StopSign,
+    Cat,
     IncomeMultiplier 
 }

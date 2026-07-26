@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
   m_Name: Mug
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: Mug
+  upgradeName: Mug 1.5x Boost
   price: 1000
   icon: {fileID: 21300000, guid: 51b3ed104bbeb9f4597c72617734d385, type: 3}
   upgradeType: 3

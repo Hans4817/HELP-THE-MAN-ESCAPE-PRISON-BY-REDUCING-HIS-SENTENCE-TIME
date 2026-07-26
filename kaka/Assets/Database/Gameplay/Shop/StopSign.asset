@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
   m_Name: StopSign
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: Stop Sign (2x)
+  upgradeName: Stop Sign 10x Boost
   price: 10000
   icon: {fileID: 21300000, guid: 22aa56d058677014d9fb2d73d8c77abd, type: 3}
   upgradeType: 4

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
   m_Name: Cat
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: 
-  price: 0
-  icon: {fileID: 0}
-  upgradeType: 0
-  upgradeValue: 0
-  prefabToSpawn: {fileID: 0}
+  upgradeName: Cat 50x Boost
+  price: 100000
+  icon: {fileID: 21300000, guid: 97a3898994aa3cd429f26696df0af0ff, type: 3}
+  upgradeType: 5
+  upgradeValue: 50
+  prefabToSpawn: {fileID: 858283186891574347, guid: a8524c6fb15dd6f448a2baaaec603ef5, type: 3}

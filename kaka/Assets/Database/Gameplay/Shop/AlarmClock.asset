@@ -17,4 +17,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 2bf0bc667665a994e9e54ed17b00e0c2, type: 3}
   upgradeType: 1
   upgradeValue: 0
-  prefabToSpawn: {fileID: 919132149155446097, guid: b27ed9c2d438c424fbe08aa6b1e26045, type: 3}
+  prefabToSpawn: {fileID: 2118641126905767152, guid: ab7136ac74acdae418c78c0ac52321c2, type: 3}

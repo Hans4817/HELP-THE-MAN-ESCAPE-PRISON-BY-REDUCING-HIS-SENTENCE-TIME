@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
   m_Name: Leftover Pizza
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: Leftover Pizza
+  upgradeName: Leftover Pizza 1.25x Boost
   price: 100
   icon: {fileID: 21300000, guid: 5357cbace885c6440aefc506840891c9, type: 3}
   upgradeType: 2
-  upgradeValue: 1.5
+  upgradeValue: 1.25
   prefabToSpawn: {fileID: 976364341222987734, guid: 12fcb67a147519d44adc543904241b5c, type: 3}

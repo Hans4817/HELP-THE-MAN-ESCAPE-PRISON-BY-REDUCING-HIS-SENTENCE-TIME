@@ -43,3 +43,8 @@ MonoBehaviour:
     mixer: {fileID: 0}
     sounds:
     - {fileID: 8300000, guid: 8c57224d8f6ce9f4f8bb2b13f9e62c0a, type: 3}
+  - name: seven
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 30ce30273c55164409f222747cd4a159, type: 3}

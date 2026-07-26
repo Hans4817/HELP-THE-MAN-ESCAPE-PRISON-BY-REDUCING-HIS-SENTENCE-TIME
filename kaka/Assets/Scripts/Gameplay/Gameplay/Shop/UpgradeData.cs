@@ -26,5 +26,6 @@ public enum UpgradeType
     Mug,
     StopSign,
     Cat,
+    Iphone,
     IncomeMultiplier 
 }

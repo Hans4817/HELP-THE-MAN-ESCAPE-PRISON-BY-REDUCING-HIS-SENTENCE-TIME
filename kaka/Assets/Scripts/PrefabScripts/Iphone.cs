@@ -2,7 +2,7 @@ using System.Collections;
 using SmallHedge.SoundManager;
 using UnityEngine;
 
-public class Cat : MonoBehaviour
+public class Iphone : MonoBehaviour
 {
     IEnumerator Add()
     {
@@ -10,7 +10,7 @@ public class Cat : MonoBehaviour
 
         while(true)
         {
-            CurrencyManager.Instance.AddMoney(1000000);
+            CurrencyManager.Instance.AddMoney(100000000);
             yield return new WaitForSeconds(1);
         }
     }

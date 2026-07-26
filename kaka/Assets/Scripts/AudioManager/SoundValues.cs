@@ -12,5 +12,6 @@ namespace SmallHedge.SoundManager
         four,
         five,
         six,
+        seven,
     }
 }

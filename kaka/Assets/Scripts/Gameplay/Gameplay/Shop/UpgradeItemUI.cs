@@ -49,20 +49,7 @@ public class UpgradeItemUI : MonoBehaviour
 
                 Debug.Log($"Purchased: {data.upgradeName} Level {currentLevel + 1} for ${currentPrice:N0}!");
 
-                // // 1. Apply effect based on UpgradeType from UpgradeData
-                // switch (data.upgradeType)
-                // {
-                //     case UpgradeType.IncomeMultiplier:
-                //         CurrencyManager.Instance.AddMoneyMultiplier(data.upgradeValue);
-                //         break;
-
-                //     case UpgradeType.Clicker:
-                //     case UpgradeType.AlarmClock:
-                //         CurrencyManager.Instance.SubtractSentenceTime(data.upgradeValue);
-                //         break;
-                // }
-
-                // 2. Spawn 3D prefab at random position in area
+                // 1. Spawn 3D prefab at random position in area
                 if (data.prefabToSpawn != null)
                 {
                     Vector3 spawnPosition = spawnArea != null ? spawnArea.GetRandomSpawnPosition() : Vector3.zero;
@@ -71,7 +58,7 @@ public class UpgradeItemUI : MonoBehaviour
                     Instantiate(data.prefabToSpawn, spawnPosition, spawnRotation);
                 }
 
-                // 3. Increment level, recalculate exponential price, and update UI
+                // 2. Increment level, recalculate exponential price, and update UI
                 currentLevel++;
                 CalculateCurrentPrice();
                 UpdatePriceUI();

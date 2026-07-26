@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 // 1. You must import the new Input System namespace
 using UnityEngine.InputSystem; 
@@ -5,6 +6,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance { get; private set; }
+
     [Header("Camera & Rotation")]
     public Camera playerCamera;
     public float lookSpeed = 0.5f; // Decreased slightly as Mouse.current returns raw deltas
@@ -29,6 +32,16 @@ public class PlayerMovement : MonoBehaviour
     private float rotationY = 0; // Tracks clamped Y rotation
     private CharacterController characterController;
     private bool canMove = true;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     void Start()
     {
@@ -119,4 +132,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, rotationY, 0);
         }
     }
+
+    public void SetMovement(bool Statement) => canMove = Statement;
 }

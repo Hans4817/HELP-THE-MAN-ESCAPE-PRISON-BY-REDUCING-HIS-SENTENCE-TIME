@@ -23,6 +23,6 @@ public class MoneyUI : MonoBehaviour
 
     private void UpdateUI(double amount)
     {
-        MoneyText.text = $"Money: {amount:N0}";
+        MoneyText.text = $"{amount:N0}";
     }
 }

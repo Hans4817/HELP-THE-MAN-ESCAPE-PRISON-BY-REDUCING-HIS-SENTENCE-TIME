@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
-public class CounterHandler : MonoBehaviour
+public class ClickToOpenShop : MonoBehaviour
 {
-    [SerializeField] private Camera playerCamera;
     [SerializeField] private float maxReachDistance = 5f;
 
-    [SerializeField] private int amountPerClick = 1;
+    [SerializeField] private CanvasGroup ShopCanva;
+
+    private Camera playerCamera;
 
     private void Start()
     {
@@ -40,7 +42,14 @@ public class CounterHandler : MonoBehaviour
 
     private void OnObjectClicked()
     {
-        Debug.Log("you did it!");
-        CurrencyManager.Instance.AddMoney(amountPerClick);
+        if(ShopCanva.alpha == 0f) // if its invisible
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            PlayerMovement.Instance.SetMovement(false);
+            ShopCanva.alpha = 1f;          // Invisible
+            ShopCanva.interactable = true; // Disable button clicks
+            ShopCanva.blocksRaycasts = true; // Allow clicks to pass through  
+        } 
     }
 }

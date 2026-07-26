@@ -42,7 +42,15 @@ public class CurrencyManager : MonoBehaviour
         OnMoneyChanged?.Invoke(Money);
     }
 
-    public bool TrySpendMoney(double amount)
+    public void SubtractMoney(double baseAmount)
+    {
+        if (baseAmount <= 0) return;
+
+        Money -= baseAmount;
+        OnMoneyChanged?.Invoke(Money);
+    }
+
+    public bool CanAffordMoney(double amount)
     {
         if (Money >= amount)
         {
@@ -61,15 +69,6 @@ public class CurrencyManager : MonoBehaviour
         MoneyMultiplier += amount;
         OnMoneyMultiplierChanged?.Invoke(MoneyMultiplier);
         Debug.Log($"Money Multiplier increased! New Multiplier: {MoneyMultiplier}x");
-    }
-
-    /// Sets an exact multiplier value (e.g., setting to 2.0 for a temporary 2x boost).
-    public void SetMoneyMultiplier(double exactMultiplier)
-    {
-        if (exactMultiplier < 1.0) return; // Prevents multiplier from going below 1x
-
-        MoneyMultiplier = exactMultiplier;
-        OnMoneyMultiplierChanged?.Invoke(MoneyMultiplier);
     }
     #endregion
 

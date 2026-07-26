@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
-  m_Name: AlarmClock
+  m_Name: Leftover Pizza
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: AlarmClock
-  price: 15
-  icon: {fileID: 21300000, guid: 2bf0bc667665a994e9e54ed17b00e0c2, type: 3}
-  upgradeType: 1
-  upgradeValue: 1.05
-  prefabToSpawn: {fileID: 919132149155446097, guid: b27ed9c2d438c424fbe08aa6b1e26045, type: 3}
+  upgradeName: Leftover Pizza
+  price: 100
+  icon: {fileID: 21300000, guid: 5357cbace885c6440aefc506840891c9, type: 3}
+  upgradeType: 2
+  upgradeValue: 0
+  prefabToSpawn: {fileID: 976364341222987734, guid: 12fcb67a147519d44adc543904241b5c, type: 3}

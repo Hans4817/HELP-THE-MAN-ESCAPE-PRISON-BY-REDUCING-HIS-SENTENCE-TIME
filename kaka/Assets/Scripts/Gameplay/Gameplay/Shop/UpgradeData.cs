@@ -22,6 +22,8 @@ public enum UpgradeType
 { 
     Clicker, 
     AlarmClock,
-
+    LeftoverPizza,
+    Mug,
+    StopSign,
     IncomeMultiplier 
 }

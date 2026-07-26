@@ -6,8 +6,10 @@ namespace SmallHedge.SoundManager
     public enum SoundType
     {
         //Put sound names in here
-        BackgroundMusic,
-        Death,
-        Goal,
+        one,
+        two,
+        three,
+        four,
+        five
     }
 }

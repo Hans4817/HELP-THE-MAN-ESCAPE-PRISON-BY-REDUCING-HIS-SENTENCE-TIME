@@ -59,5 +59,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec51f3ccbfa736742a3e32869f0acfca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6169460908893222289}
   m_SourcePrefab: {fileID: 100100000, guid: ec51f3ccbfa736742a3e32869f0acfca, type: 3}
+--- !u!1 &4799678658580096452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ec51f3ccbfa736742a3e32869f0acfca, type: 3}
+  m_PrefabInstance: {fileID: 5645978595944667285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6169460908893222289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4799678658580096452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d62443506617b3499a20340942b2e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mug

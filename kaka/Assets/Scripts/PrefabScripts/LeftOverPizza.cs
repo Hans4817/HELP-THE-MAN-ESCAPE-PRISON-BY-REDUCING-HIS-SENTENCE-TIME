@@ -2,15 +2,15 @@ using UnityEngine;
 using System.Collections;
 using SmallHedge.SoundManager;
 
-public class Clicker : MonoBehaviour
+public class LeftOverPizza : MonoBehaviour
 {
     IEnumerator Add()
     {
-            SoundManager.PlaySound(SoundType.one);
+            SoundManager.PlaySound(SoundType.three);
 
         while(true)
         {
-            CurrencyManager.Instance.AddMoney(1);
+            CurrencyManager.Instance.AddMoney(10);
             yield return new WaitForSeconds(1);
         }
     }

@@ -59,5 +59,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba518b08c1981ca478b1a0501c3935e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8706393892377656375}
   m_SourcePrefab: {fileID: 100100000, guid: ba518b08c1981ca478b1a0501c3935e9, type: 3}
+--- !u!1 &976364341222987734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba518b08c1981ca478b1a0501c3935e9, type: 3}
+  m_PrefabInstance: {fileID: 93968541060524679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8706393892377656375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976364341222987734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f19d04b9523634ba0819a0776d7b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LeftOverPizza

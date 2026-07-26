@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
   m_Name: AlarmClock
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: 
-  price: 0
+  upgradeName: AlarmClock
+  price: 15
   icon: {fileID: 0}
-  upgradeType: 0
-  upgradeValue: 0
+  upgradeType: 1
+  upgradeValue: 1.05
+  prefabToSpawn: {fileID: 919132149155446097, guid: b27ed9c2d438c424fbe08aa6b1e26045, type: 3}

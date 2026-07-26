@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5e0c054c396a643982d0ce073edb9c, type: 3}
   m_Name: Counter
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: New Upgrade
-  price: 100
-  icon: {fileID: 0}
+  upgradeName: Clicker
+  price: 5
+  icon: {fileID: 21300000, guid: 3fa2ba605c7dd684eba8c056d22a2f12, type: 3}
+  upgradeType: 0
+  upgradeValue: 0
+  prefabToSpawn: {fileID: 2106843813885685345, guid: 6eb74af4cedba3449b457510b617443a, type: 3}
